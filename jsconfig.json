@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+      "baseUrl": "./",
+      "target": "es6",
+      "module": "commonjs",
+      "allowSyntheticDefaultImports": true,
+      "paths": {
+        "#projectRoot": ["."],
+        "#projectRoot/*.js": ["./*.js"],
+
+        "#src": ["./src/index.js"],
+        "#src/*.js": ["./src/*.js"],
+
+        "#util": ["./util/index.js"],
+
+        "@tr-util": ["../../packages-other/util/src/index.js"]
+        
+      }
+  },
+  "include": ["**/*.js"],
+  "exclude": ["node_modules"]
+}

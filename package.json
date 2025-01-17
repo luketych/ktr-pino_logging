@@ -1,0 +1,40 @@
+{
+  "name": "@ktr-srt/logging",
+  "main": "src/index.js",
+  "private": true,
+  "author": {
+    "name": "Luke Tych",
+    "email": "luketych.trading@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ktr-srt.git",
+    "directory": "logging"
+  },
+  "version": "0.1.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "dev": "node src/index.js",
+    "test": "mocha --recursive ./test --reporter spec"
+  },
+  "imports": {
+    "#src": "./src/index.js",
+    "#src/*": "./src/*.js",
+    "#util": "./util/index.js"
+  },
+"dependencies": {
+  "ktr-util": "git+https://github.com/luketych/ktr-util.git",
+  "chalk": "^5.2.0",
+  "gradient-string": "^2.0.2",
+  "lodash": "^4.17.21",
+  "pino": "^8.15.1",
+  "pino-pretty": "^10.2.0",
+  "strip-ansi": "^7.0.1",
+  "winston": "^3.8.2"
+},
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.8.2"
+  }
+}
