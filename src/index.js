@@ -10,6 +10,10 @@ export const pinoLoggerCreate = async (importMetaURL, options = {}) => {
     throw new Error('Either stream or destination must be provided');
   }
 
+  if (destination && !fs.existsSync(destination)) {
+    throw new Error(`Destination file or directory does not exist: ${destination}`);
+  }
+
   if (!formatterType) {
     throw new Error('Please provide a formatter function.');
   }
