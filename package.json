@@ -1,15 +1,10 @@
 {
-  "name": "@ktr-srt/logging",
+  "name": "ktr-pino_logging",
   "main": "src/index.js",
   "private": true,
   "author": {
     "name": "Luke Tych",
     "email": "luketych.trading@gmail.com"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ktr-srt.git",
-    "directory": "logging"
   },
   "version": "0.1.0",
   "description": "",
