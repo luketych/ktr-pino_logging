@@ -1,7 +1,8 @@
 {
   "name": "ktr-pino_logging",
   "main": "src/index.js",
-  "private": true,
+  "types": "src/index.d.ts",
+  "private": false,
   "author": {
     "name": "Luke Tych",
     "email": "luketych.trading@gmail.com"
