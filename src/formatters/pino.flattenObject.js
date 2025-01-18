@@ -14,7 +14,7 @@ const flattenObjectFormatter = (options) => ((logObj) => {
     assert(typeof logObj === 'object', 'logObj is not an object.')
 
 
-    const flattenedData = flatten(logObj, { flattenDepth: 1, keepParentKey: true })
+    const flattenedData = flatten(logObj)
 
 
     return flattenedData

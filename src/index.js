@@ -14,9 +14,11 @@ export const pinoLoggerCreate = async (importMetaURL, options = {}) => {
 
   if (destination) {
     try {
-      await fs.promises.access(destination);
+      if (!(await fs.promises.stat(destination).catch(() => false))) {
+        throw new Error(`Destination file does not exist: ${destination}`);
+      }
     } catch (error) {
-      throw new Error(`Destination file does not exist: ${destination}`);
+      throw error;
     }
   }
 
