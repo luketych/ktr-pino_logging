@@ -19,16 +19,17 @@
     "#src/*": "./src/*.js",
     "#util": "./util/index.js"
   },
-"dependencies": {
-  "ktr-util": "git+https://github.com/luketych/ktr-util.git",
-  "chalk": "^5.2.0",
-  "gradient-string": "^2.0.2",
-  "lodash": "^4.17.21",
-  "pino": "^8.15.1",
-  "pino-pretty": "^10.2.0",
-  "strip-ansi": "^7.0.1",
-  "winston": "^3.8.2"
-},
+  "dependencies": {
+    "chalk": "^5.2.0",
+    "fs": "^0.0.1-security",
+    "gradient-string": "^2.0.2",
+    "ktr-util": "git+https://github.com/luketych/ktr-util.git",
+    "lodash": "^4.17.21",
+    "pino": "^8.15.1",
+    "pino-pretty": "^10.2.0",
+    "strip-ansi": "^7.0.1",
+    "winston": "^3.8.2"
+  },
   "devDependencies": {
     "chai": "^4.3.7",
     "mocha": "^10.8.2"

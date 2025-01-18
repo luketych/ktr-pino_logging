@@ -1,3 +1,5 @@
+import fs from 'fs';
+
 import { PinoLoggerFactory } from './PinoLoggerFactory.js'
 import basicFormatter from './formatters/pino.basic.js'
 import basicStringFormatter from './formatters/pino.basicString.js'
@@ -10,7 +12,7 @@ export const pinoLoggerCreate = async (importMetaURL, options = {}) => {
     throw new Error('Either stream or destination must be provided');
   }
 
-  if (destination && !fs.existsSync(destination)) {
+  if (destination && !(await fs.promises.access(destination).catch(() => false))) {
     throw new Error(`Destination file or directory does not exist: ${destination}`);
   }
 
