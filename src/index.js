@@ -12,8 +12,12 @@ export const pinoLoggerCreate = async (importMetaURL, options = {}) => {
     throw new Error('Either stream or destination must be provided');
   }
 
-  if (destination && !(await fs.promises.access(destination).catch(() => false))) {
-    throw new Error(`Destination file or directory does not exist: ${destination}`);
+  if (destination) {
+    try {
+      await fs.promises.access(destination);
+    } catch (error) {
+      throw new Error(`Destination file does not exist: ${destination}`);
+    }
   }
 
   if (!formatterType) {
